@@ -1,36 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página Web</title>
-    <link rel="stylesheet" href="estilos.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mi Sitio de Prueba</title>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
+  <header class="site-header">
+    <div class="container">
+      <img src="assets/logo.png" alt="Logo" class="logo" />
+      <h1>Mi Sitio de Prueba</h1>
+      <p class="subtitle">Página creada para el trabajo de la universidad</p>
+    </div>
+  </header>
 
-    <header>
-        <h1>Bienvenido a Mi Página Web</h1>
-        <p>Proyecto académico – Hosting y despliegue</p>
-    </header>
-
-    <section class="contenido">
-        <h2>Sobre este sitio</h2>
-        <p>
-            Esta es una página web creada como parte del taller universitario sobre 
-            proveedores de hosting, despliegue Web y publicación en Internet.
-        </p>
-
-        <h2>Características</h2>
-        <ul>
-            <li>Creada con HTML y CSS</li>
-            <li>Subida a GitHub</li>
-            <li>Publicada en un servicio de hosting gratuito</li>
-        </ul>
+  <main class="container">
+    <section id="hero">
+      <h2>Bienvenido</h2>
+      <p>Esta es una página de ejemplo con HTML, CSS y JavaScript para practicar despliegue en hosting.</p>
+      <a id="ver-mas" class="btn" href="#info">Ver más</a>
     </section>
 
-    <footer>
-        <p>© 2025 Mi Proyecto Web – Todos los derechos reservados.</p>
-    </footer>
+    <section id="info">
+      <h3>Sobre el proyecto</h3>
+      <p>Proyecto académico que demuestra los pasos básicos para publicar una web.</p>
+      <ul>
+        <li>HTML semántico</li>
+        <li>CSS externo</li>
+        <li>Interactividad simple con JS</li>
+      </ul>
+    </section>
 
+    <section id="contacto">
+      <h3>Contacto</h3>
+      <form id="contact-form">
+        <label for="name">Nombre</label>
+        <input id="name" name="name" type="text" required />
+
+        <label for="email">Correo</label>
+        <input id="email" name="email" type="email" required />
+
+        <label for="message">Mensaje</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+      <p id="msg-output" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Carlos Andrés - Trabajo Universidad</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
+
+
