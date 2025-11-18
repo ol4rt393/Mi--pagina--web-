@@ -9,12 +9,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Animaciones suaves -->
+  <style>
+    .fade-in {
+      opacity: 0;
+      transform: translateY(15px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+    .visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 </head>
 
 <body>
-  <header class="site-header">
+  <header class="site-header fade-in">
     <div class="container header-content">
-      <img src="assets/logo.png" alt="Logo" class="logo" />
+      <img src="assets/logo.png" alt="Logo" class="logo" loading="lazy" />
       <div>
         <h1 class="title">Mi Sitio Moderno</h1>
         <p class="subtitle">Página mejorada para el proyecto universitario</p>
@@ -24,13 +37,13 @@
 
   <main class="container">
 
-    <section id="hero" class="card hero">
+    <section id="hero" class="card hero fade-in">
       <h2>Bienvenido</h2>
-      <p>Esta página fue rediseñada para ofrecer un estilo moderno, limpio y agradable a la vista, usando HTML, CSS y animaciones.</p>
+      <p>Esta página fue rediseñada con un estilo moderno, minimalista y agradable, usando HTML, CSS y JavaScript moderno.</p>
       <a id="ver-mas" class="btn" href="#info">Explorar</a>
     </section>
 
-    <section id="info" class="card">
+    <section id="info" class="card fade-in">
       <h3>Sobre este proyecto</h3>
       <p>Es un ejemplo práctico para aprender diseño web moderno y despliegue en hosting.</p>
       <ul class="list">
@@ -41,7 +54,7 @@
       </ul>
     </section>
 
-    <section id="contacto" class="card">
+    <section id="contacto" class="card fade-in">
       <h3>Contacto</h3>
       <form id="contact-form">
         <label for="name">Nombre</label>
@@ -60,9 +73,9 @@
 
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer fade-in">
     <div class="container">
-      <p>© <span id="year"></span> Carlos Andrés - Proyecto Web Moderno</p>
+      <p>© <span id="year"></span> Carlos Andrés — Proyecto Web Moderno</p>
     </div>
   </footer>
 
