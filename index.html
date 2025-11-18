@@ -3,36 +3,45 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mi Sitio de Prueba</title>
+  <title>Mi Sitio Moderno</title>
+
+  <!-- GOOGLE FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/styles.css" />
 </head>
+
 <body>
   <header class="site-header">
-    <div class="container">
+    <div class="container header-content">
       <img src="assets/logo.png" alt="Logo" class="logo" />
-      <h1>Mi Sitio de Prueba</h1>
-      <p class="subtitle">Página creada para el trabajo de la universidad</p>
+      <div>
+        <h1 class="title">Mi Sitio Moderno</h1>
+        <p class="subtitle">Página mejorada para el proyecto universitario</p>
+      </div>
     </div>
   </header>
 
   <main class="container">
-    <section id="hero">
+
+    <section id="hero" class="card hero">
       <h2>Bienvenido</h2>
-      <p>Esta es una página de ejemplo con HTML, CSS y JavaScript para practicar despliegue en hosting.</p>
-      <a id="ver-mas" class="btn" href="#info">Ver más</a>
+      <p>Esta página fue rediseñada para ofrecer un estilo moderno, limpio y agradable a la vista, usando HTML, CSS y animaciones.</p>
+      <a id="ver-mas" class="btn" href="#info">Explorar</a>
     </section>
 
-    <section id="info">
-      <h3>Sobre el proyecto</h3>
-      <p>Proyecto académico que demuestra los pasos básicos para publicar una web.</p>
-      <ul>
-        <li>HTML semántico</li>
-        <li>CSS externo</li>
-        <li>Interactividad simple con JS</li>
+    <section id="info" class="card">
+      <h3>Sobre este proyecto</h3>
+      <p>Es un ejemplo práctico para aprender diseño web moderno y despliegue en hosting.</p>
+      <ul class="list">
+        <li>✔ Diseño moderno</li>
+        <li>✔ Tipografías limpias</li>
+        <li>✔ Animaciones suaves</li>
+        <li>✔ Interactividad con JavaScript</li>
       </ul>
     </section>
 
-    <section id="contacto">
+    <section id="contacto" class="card">
       <h3>Contacto</h3>
       <form id="contact-form">
         <label for="name">Nombre</label>
@@ -48,16 +57,19 @@
       </form>
       <p id="msg-output" aria-live="polite"></p>
     </section>
+
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>© <span id="year"></span> Carlos Andrés - Trabajo Universidad</p>
+      <p>© <span id="year"></span> Carlos Andrés - Proyecto Web Moderno</p>
     </div>
   </footer>
 
   <script src="js/script.js"></script>
 </body>
 </html>
+
+
 
 
