@@ -1,19 +1,32 @@
-// Mostrar año actual en el footer
-document.getElementById('year').textContent = new Date().getFullYear();
+// Insertar año actual en el footer
+document.getElementById("year").textContent = new Date().getFullYear();
 
-// Botón "Ver más" - scroll suave
-document.getElementById('ver-mas').addEventListener('click', function(e){
+// Scroll suave al hacer clic en "Ver más"
+document.getElementById("ver-mas").addEventListener("click", function (e) {
   e.preventDefault();
-  document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+  document.querySelector("#info").scrollIntoView({
+    behavior: "smooth",
+  });
 });
 
-// Formulario - simular envío
-document.getElementById('contact-form').addEventListener('submit', function(e){
+// Manejo del formulario
+document.getElementById("contact-form").addEventListener("submit", function (e) {
   e.preventDefault();
-  const name = document.getElementById('name').value.trim();
-  const msg = `Gracias ${name}, tu mensaje ha sido enviado (simulado).`;
-  const out = document.getElementById('msg-output');
-  out.textContent = msg;
-  out.style.color = 'green';
+
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  const output = document.getElementById("msg-output");
+
+  if (!name || !email) {
+    output.textContent = "Por favor llena el nombre y el correo.";
+    output.style.color = "red";
+    return;
+  }
+
+  output.textContent = `Gracias ${name}, tu mensaje ha sido enviado correctamente.`;
+  output.style.color = "green";
+
   this.reset();
 });
